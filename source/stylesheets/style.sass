@@ -1,0 +1,40 @@
+@import compass
+@import compass/reset
+
+$dosis: "dosis", "helvetica", "sans-serif"
+$page-width: 960px
+$main-font: $dosis
+
+$nautical-blue: #012345
+$nautical-white: #F8FDFE
+$nautical-light-blue: #93CCEA
+$nautical-orange: #FF8800
+
+=tablet
+  @media screen and (max-width: $page-width)
+    @content
+
+body
+  :background $nautical-white
+  :font-family $main-font
+
+.content-wrapper
+  :width $page-width
+  :margin 0 auto
+
+#main-header
+  :background $nautical-blue
+  +background(linear-gradient(lighten($nautical-blue, 20), $nautical-blue))
+  :color $nautical-white
+
+  nav
+    li
+      :display inline-block
+      :padding 0.5em
+      +transition(font-weight 1s)
+
+      +tablet
+        :background green
+
+      &:hover
+        :font-weight bold

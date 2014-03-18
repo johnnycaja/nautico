@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Nautica Milja" %></title>
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    
+    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <div id="wrapper">
+      <header id="main-header">
+        <div class="content-wrapper">
+          <nav>
+            <ul>
+              <li>Home</li>
+              <li>Nosotros</li>
+              <li>Barcos</li>
+              <li>Accesorios</li>
+              <li>Contacto</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div="content">
+      <div class="content-wrapper">
+        <%= yield %>
+      </div>
+    </div>
+    <footer id="main-footer">
+      <div class="content-wrapper">
+        Copyright Nautica Milja 2014 | <a href="mailto: contacto@nauticamilja.com">contacto@nauticamilja.com</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
