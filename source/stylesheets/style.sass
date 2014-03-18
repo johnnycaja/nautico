@@ -24,17 +24,87 @@ body
 
 #main-header
   :background $nautical-blue
-  +background(linear-gradient(lighten($nautical-blue, 20), $nautical-blue))
+  +background(linear-gradient(lighten($nautical-blue, 30), $nautical-blue))
   :color $nautical-white
+  :height 100px
+
+  #logo
+    :font-size 30px
+    :color $nautical-light-blue
+    :position absolute
+    :left 0
+    :margin-left 40px
+    :padding 10px
+    :text-transform uppercase
+
+  .content-wrapper
+    :padding 1em 0
+    :height 50px
 
   nav
+    :position absolute
+    :margin-right 40px
+    :right 0
+    :cursor pointer
+
     li
       :display inline-block
-      :padding 0.5em
-      +transition(font-weight 1s)
+      :padding-top 20px
+      :padding-left 1em
+      :text-transform uppercase
+      :font-size 18px
+      +transition(color 1s)
 
       +tablet
         :background green
 
       &:hover
-        :font-weight bold
+        :color $nautical-orange
+
+#main-banner
+  :position absolute
+  :left 0
+  :height 400px
+  :width 100%
+  :background-image url("http://www.yacht-buch.de/images/kroatien-1280x400_eyecatcher.jpg")
+
+#main-footer
+  :background $nautical-light-blue
+  :color $nautical-white
+  :position absolute
+  :bottom 0
+  :position fixed
+  :width 100%
+
+  .content-wrapper
+    :padding 1em 0
+
+#med-menu
+  :height 150px
+  :position absolute
+  :top 500px
+  :left 0
+  :width 100%
+
+  #novedades
+    :width 425px
+    :height 150px
+    :background $nautical-orange
+    :display inline-block
+    :position absolute
+    :left 0
+
+  #ofertas
+    :width 425px
+    :height 150px
+    :background $nautical-white
+    :display inline-block
+
+  #de-coleccion
+    :background $nautical-blue
+    :width 425px
+    :height 150px
+    :position absolute
+    :display inline-block
+    :margin-left 3px
+
